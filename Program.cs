@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace ProjectCalculator
 {
-    internal class Program
+    public class Program
     {
-        Metodos m;
+        
 
         public Program() 
         { 
-        m = new Metodos();
+        Menu menu = new Menu();
+            menu.ExibirMenu();
 
         }
         static void Main(string[] args)
         {
-            
+            Program ex = new Program(); 
+            Console.ReadKey();  
 
         }
     }

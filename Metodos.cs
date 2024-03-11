@@ -11,13 +11,15 @@ namespace ProjectCalculator
 
         public double a, b, result;
 
-        public double Soma(double a, double b, double result)
+        public void Soma()
         {
+            Console.Clear();
             Console.WriteLine("Digite dois numeros para que possamos somar os mesmos:\n");
             a = double.Parse(Console.ReadLine());
             b = double.Parse(Console.ReadLine());
 
-            return result = a + b;
+            result = a + b;
+            
 
             Console.WriteLine("O resultado da soma e:" + result);
 
@@ -28,7 +30,7 @@ namespace ProjectCalculator
             Console.WriteLine("Digite dois numeros para que possamos subtrair os mesmos:\n");
             a = double.Parse(Console.ReadLine());
             b = double.Parse(Console.ReadLine());
-            return result = a - b;
+            return  a - b;
 
         }
 

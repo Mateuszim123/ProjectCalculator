@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectCalculator
 {
-    internal class MenoPrincipal
+    public class Menu
     {
         private Metodos metodos;
 
@@ -31,16 +31,17 @@ namespace ProjectCalculator
                 switch (escolha)
                 {
                     case "1":
-                        RealizarOperacao(metodos.Soma);
+                        metodos.Soma();
+
                         break;
                     case "2":
-                        RealizarOperacao(metodos.sub);
+
                         break;
                     case "3":
-                        RealizarOperacao(metodos.Multiplicar);
+
                         break;
                     case "4":
-                        RealizarOperacao(metodos.div);
+
                         break;
                     case "5":
                         Environment.Exit(0);
@@ -52,19 +53,8 @@ namespace ProjectCalculator
             }
         }
 
-        private void RealizarOperacao(Func<double, double, double> operacao)
-        {
-            Console.Write("Digite o primeiro número: ");
-            double num1 = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Digite o segundo número: ");
-            double num2 = Convert.ToDouble(Console.ReadLine());
-
-            double resultado = operacao(num1, num2);
-            Console.WriteLine($"Resultado: {resultado}\n");
-        }
     }
 
 
-}
+
 }
